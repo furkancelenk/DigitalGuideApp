@@ -1,0 +1,103 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_favorites_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circularstd"
+            android:text="Parion Antik Kenti"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_favorites_location"
+            app:layout_constraintEnd_toEndOf="@+id/tv_favorites_location"
+            app:layout_constraintStart_toStartOf="@+id/tv_favorites_location" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="120dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_favorites_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/mcw_favorites"
+            app:layout_constraintTop_toBottomOf="@+id/tv_favorites_title"
+            app:srcCompat="@drawable/ic_location" />
+
+        <TextView
+            android:id="@+id/tv_favorites_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/circularstd"
+            android:maxLines="3"
+            android:text="Location"
+            android:textAlignment="center"
+            android:textSize="12.5sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_favorites_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/mcw_favorites" />
+
+        <TextView
+            android:id="@+id/tv_favorites_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/circularstd"
+            android:maxLines="3"
+            android:text="Description"
+            android:textAlignment="center"
+            android:textColor="#747474"
+            android:textSize="12.5sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_favorites_location"
+            app:layout_constraintStart_toStartOf="@+id/tv_favorites_location" />
+
+        <ImageView
+            android:id="@+id/img_favorites_heart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="55dp"
+            android:padding="10.40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_favorites_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_favorites_selected" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcw_favorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_favorites_card"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

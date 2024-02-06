@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/categoryFragment">
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.celenko.digitalguide.ui.favorites.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/favorites_to_detail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.celenko.digitalguide.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.celenko.digitalguide.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/home_to_detail"
+            app:destination="@id/detailFragment" />
+        <argument
+            android:name="category"
+            app:argType="com.celenko.digitalguide.data.model.Category" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.celenko.digitalguide.ui.category.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category">
+        <action
+            android:id="@+id/category_to_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
